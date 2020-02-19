@@ -22,6 +22,9 @@ app.use('/vue',
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'views/index.html'));
 });
+app.get('/participant', function(req, res) {
+  res.sendFile(path.join(__dirname, 'views/user/part-index.html'));
+});
 // // Serve map.html as /map
 // app.get('/map', function(req, res) {
 //   res.sendFile(path.join(__dirname, 'views/map.html'));

@@ -1,0 +1,13 @@
+
+header {
+    background-attachment: scroll;
+    margin: 10px;
+    height: 100px;
+    overflow:hidden;
+}
+body {
+    background-color: aquamarine;
+}
+header h1 {
+}
+
