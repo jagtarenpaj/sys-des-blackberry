@@ -20,7 +20,7 @@ app.use('/vue',
   express.static(path.join(__dirname, '/node_modules/vue/dist/')));
 // Serve index.html directly as root page
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'views/index.html'));
+  res.sendFile(path.join(__dirname, 'views/organizer/org2.html'));
 });
 // // Serve map.html as /map
 // app.get('/map', function(req, res) {
