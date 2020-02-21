@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <head>
+    <title>Burger Online </title>
+    <meta charset ="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/user/participant-style.css">
+    <script src="/vue/vue.js" defer></script>
+    <script type="text/javascript" src="js/user/menu.js"></script>
+    <script src="js/user/part_1_script.js" defer></script>
+    <script src="js/user/participant-vue-script.js" defer></script>
+    <script src="https://vuejs.org/js/vue.js"></script>
+
+    
+  </head>
+  <body>
+    <div id = "mainTimer">
+      <p class="timer" id="timer"></p>
+      <p class="timer"> Table {{table_no}} </p>
+      <p class="timer"> Your Date </p>
+      <img class="timer" :src="image">
+      <p class="timer">{{part_name}}</p>
+    </div>
+  </body>
+</html>

@@ -25,6 +25,12 @@ app.get('/', function(req, res) {
 app.get('/participant', function(req, res) {
   res.sendFile(path.join(__dirname, 'views/user/part-index.html'));
 });
+app.get('/participant1', function(req, res) {
+  res.sendFile(path.join(__dirname, 'views/user/part_1_index.html'));
+});
+app.get('/participant2', function(req, res) {
+  res.sendFile(path.join(__dirname, 'views/user/part_2_index.html'));
+});
 // // Serve map.html as /map
 // app.get('/map', function(req, res) {
 //   res.sendFile(path.join(__dirname, 'views/map.html'));
