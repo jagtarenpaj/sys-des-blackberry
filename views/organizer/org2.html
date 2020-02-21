@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        <title>Orgenizer/match</title>
+        <title>BB dating - dashboard</title>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/organizer/style.css">
   </head>
-  <body>
-      <input type="image" src="img/organizer/exit.png" width="300" height="150">
+  
+  <body id="dashboard">
 
-      <input type="image" src="img/organizer/play.png" width="200" height="200">
+    <div class="sidebar">
+      <h2 class="profileHeader"> Profiles </h2>
+    </div>
+    
+      <input id="exit" type="image" src="img/organizer/exit.png" width="300" height="150">
+
+      <span class="centerFunction">
+      <input id="play" type="image" src="img/organizer/play.png" width="200" height="200">
+      </span>
+      
       <div id="participant">
         <div v-for:"person in people">
           <img :id="person.name" :src="person.img" :width="width">
         </div>
-      </div>    
+      </div>
+      
   </body>
 </html>
