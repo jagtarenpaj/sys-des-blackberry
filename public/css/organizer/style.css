@@ -5,29 +5,6 @@ body{
     
 }
 
-.sidebar{
-    position: fixed;
-    top: 0;
-    left: 0;
-
-
-    background: #ffacb7;
-    height: 100%;
-    width: 300px;
-}
-
-.profileHeader{
-    display: block;
-    margin: 0;
-    padding-top: 5%;
-    
-    color: #ff6069;
-    background-color: #fbccd1;
-
-    text-align: center;
-    height: 5%;
-}
-
 #exit{
     position: fixed;
     right: 0%;
@@ -39,10 +16,68 @@ body{
 
 #play{
     position: fixed;
-    left: 44%;
+    left: 45%;
     top: 38%;
-    margin-left: 100px;
 
     height: auto;
     width: 9%;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+
+    background: #ffacb7;
+    height: 100%;
+    width: 250px;
+}
+
+.profileSideHeader{
+    display: block;
+    margin: 0;
+    padding-top: 5%;
+    
+    color: #ff6069;
+    background-color: #fbccd1;
+
+    text-align: center;
+    height: 5%;
+}
+
+.profileWrapper{
+    display: inline-grid;
+    
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /*Number pf rows and columns must be reactive*/
+    grid-template-rows: 1fr 1fr 1fr;
+
+    justify-items: center;
+
+    margin: auto;
+    margin-left: 30%;
+    top: 30%;
+
+}
+
+.profilePicture{
+    position: relative;
+    
+    margin: auto auto;
+
+    height: 90px;
+    width: auto;
+}
+
+.deg0{
+
+}
+
+.profile0{
+
+}
+
+.profile1{
+    
 }
