@@ -1,28 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-        <title>BB dating - dashboard</title>
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="css/organizer/style.css">
+<html lang="en" id="dashboard_page">
+  <head> 
+    <link rel="stylesheet" type="text/css" href="css/organizer/style.css">
+
+    <script type="text/javascript" src="js/common/userProfiles.js"></script>
+
+    <script src="https://vuejs.org/js/vue.js"></script>
+    <script charset="utf-8" src="js/organizer/vue_script.js" defer></script>
+    <meta charset="utf-8"/>
+
+    <title>BB dating - dashboard</title>
   </head>
   
   <body id="dashboard">
 
-    <div class="sidebar">
-      <h2 class="profileHeader"> Profiles </h2>
-    </div>
-    
-      <input id="exit" type="image" src="img/organizer/exit.png" width="300" height="150">
+    <main id="dashboardContent">
 
-      <span class="centerFunction">
-      <input id="play" type="image" src="img/organizer/play.png" width="200" height="200">
-      </span>
-      
-      <div id="participant">
-        <div v-for:"person in people">
-          <img :id="person.name" :src="person.img" :width="width">
-        </div>
+      <div class="sidebar">
+	<h2 class="profileSideHeader"> Profiles </h2>
       </div>
+    
+    <input id="exit" type="image" src="img/organizer/exit.png">
+
+    <span class="profileCircleWrapper">
+      <input id="play" type="image" src="img/organizer/play.png">
       
+      <span v-for="(person, index) in profiles">
+        <input :id="person.name"
+	       type="image"
+	       class="profilePicture"
+	       :class="[`deg${degreeSpace[index]}`, `profile${index % 2}`]"
+	       :style="spaceProfile(index, person)"
+	       :src="person.photo"/>
+      </span>
+    </span>
+
+
+    </main>
   </body>
 </html>

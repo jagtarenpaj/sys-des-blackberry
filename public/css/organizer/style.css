@@ -14,15 +14,6 @@ body{
     width: 10%;
 }
 
-#play{
-    position: fixed;
-    left: 45%;
-    top: 38%;
-
-    height: auto;
-    width: 9%;
-}
-
 .sidebar{
     position: fixed;
     top: 0;
@@ -37,7 +28,7 @@ body{
 .profileSideHeader{
     display: block;
     margin: 0;
-    padding-top: 5%;
+    padding-top: 5.5%;
     
     color: #ff6069;
     background-color: #fbccd1;
@@ -46,38 +37,35 @@ body{
     height: 5%;
 }
 
-.profileWrapper{
-    display: inline-grid;
+#play{
+    position: fixed;
+    left: 45%;
+    top: 38%;
+
+    height: auto;
+    width: 9%;
+}
+
+.profileCircleWrapper{
+    position: fixed;
     
-    grid-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /*Number pf rows and columns must be reactive*/
-    grid-template-rows: 1fr 1fr 1fr;
+    margin: auto auto;
+    
+    left: 47.25%;
+    top: 42%;
+    background-color: blue;
 
-    justify-items: center;
-
-    margin: auto;
-    margin-left: 30%;
-    top: 30%;
-
+    /*text-align: center;
+    background:pink;
+    border-radius: 50%;*/
 }
 
 .profilePicture{
-    position: relative;
+    display: block;
+    position: absolute;
     
     margin: auto auto;
 
     height: 90px;
-    width: auto;
-}
-
-.deg0{
-
-}
-
-.profile0{
-
-}
-
-.profile1{
-    
+    width: 90px;
 }
