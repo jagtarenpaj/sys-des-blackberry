@@ -14,7 +14,18 @@ body{
     width: 10%;
 }
 
-.sidebar{
+.tempSidebar{
+    position: fixed;
+    top: 10%;
+    right: 0;
+
+    background: rgba(255, 172, 183, 0.2);
+    height: 100%;
+    width: 250px;
+}
+
+
+.profileSidebar{
     position: fixed;
     top: 0;
     left: 0;
@@ -68,10 +79,8 @@ body{
     top: 41.75%;
 }
 .profilePicture{
-
     position: fixed;
-    float: left;
-    
+
     height: 90px;
     width: 90px;
 }

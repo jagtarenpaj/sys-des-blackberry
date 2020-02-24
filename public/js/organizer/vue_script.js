@@ -56,6 +56,7 @@ const vm = new Vue({
 	    //Undo circle transformation
 	    person.style.transform = "none";
 	    person.style.margin= "auto 2% auto auto";
+	    person.style.opacity = "100%";
 	},
 	dropProfile: function(event){
 	    event.preventDefault();

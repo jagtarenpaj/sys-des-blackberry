@@ -16,12 +16,18 @@
 
     <main id="dashboardContent">
 
-      <div class="sidebar"
+      <div class="profileSidebar sidebar"
 	   v-on:dragstart="dragProfile"
 	   v-on:dragover="allowDrop"
 	   v-on:drop="dropSidebar">
 	<h2 class="profileSideHeader"> Profiles </h2>
       </div>
+
+       <span class="tempSidebar sidebar"
+	   v-on:dragstart="dragProfile"
+	   v-on:dragover="allowDrop"
+	   v-on:drop="dropSidebar">
+      </span>
     
     <input id="exit" type="image" src="img/organizer/exit.png">
 
