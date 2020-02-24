@@ -21,8 +21,30 @@ header h1 {
     width: 50%;
 }
 
-img{
+/* .profiles { */
+/*     display:grid; */
+/* } */
+
+/* .profiles .checkb { */
+/*     display:grid; */
+/* } */
+
+.wrapper img{
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper .round {
     border-radius: 50%;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+}
+
+.wrapper input {
+    display: block;
+    margin: auto auto;
+    width: auto;
 }
 
 div#mainRating{
@@ -51,4 +73,9 @@ div#mainRating{
    color: gold;
 }
 
-
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+    grid-auto-rows: 1fr;
+}
