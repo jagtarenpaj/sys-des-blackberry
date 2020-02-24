@@ -16,24 +16,35 @@
 
     <main id="dashboardContent">
 
-      <div class="sidebar">
+      <div class="sidebar"
+	   v-on:dragstart="dragProfile"
+	   v-on:dragover="allowDrop"
+	   v-on:drop="dropSidebar">
 	<h2 class="profileSideHeader"> Profiles </h2>
       </div>
     
     <input id="exit" type="image" src="img/organizer/exit.png">
 
-    <span class="profileCircleWrapper">
+    
       <input id="play" type="image" src="img/organizer/play.png">
       
-      <span v-for="(person, index) in profiles">
+      <div v-for="(person, index) in profiles"
+	   class="profilePictureWraps"
+	   draggable="true"
+	   v-on:dragover="allowDrop"
+	   v-on:drop="dropProfile"
+	   :class="`${person.name}wraps`"
+	   :style="spaceProfile(index)">
         <input :id="person.name"
 	       type="image"
 	       class="profilePicture"
-	       :class="[`deg${degreeSpace[index]}`, `profile${index % 2}`]"
-	       :style="spaceProfile(index, person)"
+	       draggable="true"
+	       v-on:dragstart="dragSidebar"      
+	       :class="[`deg${degreeSpace[index]}`, `profile${index % 2}`, index]"
 	       :src="person.photo"/>
-      </span>
-    </span>
+	
+      </div>
+    
 
 
     </main>

@@ -36,6 +36,16 @@ body{
     text-align: center;
     height: 5%;
 }
+.sidebar input {
+    display: block;
+    position: relative;
+
+    /* TODO: Make photo alignment leftwards*/
+    z-index: 3;
+    
+    height: 70px;
+    width: auto;
+}
 
 #play{
     position: fixed;
@@ -46,26 +56,34 @@ body{
     width: 9%;
 }
 
-.profileCircleWrapper{
+.profilePictureWraps{
     position: fixed;
-    
-    margin: auto auto;
-    
-    left: 47.25%;
-    top: 42%;
-    background-color: blue;
 
-    /*text-align: center;
-    background:pink;
-    border-radius: 50%;*/
-}
-
-.profilePicture{
-    display: block;
-    position: absolute;
-    
-    margin: auto auto;
+    margin: 0 0;
 
     height: 90px;
     width: 90px;
+
+    left: 47.2%;
+    top: 41.75%;
 }
+.profilePicture{
+
+    position: fixed;
+    float: left;
+    
+    height: 90px;
+    width: 90px;
+}
+
+/*
+.table{
+    
+    position: relative;
+    z-index: -1;
+
+    margin: 0 0;
+
+    background-color: blue;
+}
+*/
