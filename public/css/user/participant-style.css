@@ -32,6 +32,7 @@ header {
 }
 
 
+
 #bodyPart4 {
     background-image: url(/img/common/Background.png);
     background-color: aquamarine;
@@ -42,8 +43,8 @@ header {
     /* margin-left: auto; */
     /* margin-right: auto; */
     /* width: 50%;  */
-}
 
+}
 
 
 #bodyPart1 img {
@@ -70,6 +71,7 @@ header {
    position: absolute;
    color: gold;
 }
+
 
 #bodyPart2 button {
   background-color: deepskyblue;
@@ -101,4 +103,10 @@ header {
     display: block;
     margin: auto auto;
     width: auto;
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+    grid-auto-rows: 1fr;
 }
