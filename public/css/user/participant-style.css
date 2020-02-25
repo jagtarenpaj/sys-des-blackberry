@@ -5,13 +5,16 @@ header {
     height: 100px;
     overflow:hidden;
 }
-body {
+
+
+#bodyPart {
+    background-image: url(/img/common/Background.png);
     background-color: aquamarine;
 }
-header h1 {
-}
 
-.timer{
+#bodyPart1 {
+    background-image: url(/img/common/Background.png);
+    background-color: aquamarine;
     display: block;
     text-align: center;
     font-size: 50px;
@@ -21,13 +24,78 @@ header h1 {
     width: 50%;
 }
 
-/* .profiles { */
-/*     display:grid; */
-/* } */
+#bodyPart2 {
+    background-image: url(/img/common/Background.png);
+    background-color: aquamarine;
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 
-/* .profiles .checkb { */
-/*     display:grid; */
-/* } */
+}
+
+#bodyPart3 {
+    background-image: url(/img/common/Background.png);
+    background-color: aquamarine; 
+}
+
+
+#bodyPart4 {
+    background-image: url(/img/common/Background.png);
+    background-color: aquamarine;
+    /* display: block; */
+    /* text-align: center; */
+    /* font-size: 40px; */
+    /* margin-top: 0px; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* width: 50%;  */
+
+}
+
+
+#bodyPart1 img {
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   color: gold;
+}
+
+
+#bodyPart2 button {
+  background-color: deepskyblue;
+  border: none;
+  border-radius: 50%;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
 .wrapper img{
     width: 100%;
@@ -47,30 +115,12 @@ header h1 {
     width: auto;
 }
 
-div#mainRating{
+.wrapper p {
     display: block;
-    text-align: center;
-    font-size: 40px;
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%; 
-}
-
-.rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-}
-.rating > span {
-  display: inline-block;
-  position: relative;
-  width: 1.1em;
-}
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
-   content: "\2605";
-   position: absolute;
-   color: gold;
+    margin: auto auto;
+    margin-top: 10%;
+    font-size: 30px;
+    width: auto;
 }
 
 .wrapper {

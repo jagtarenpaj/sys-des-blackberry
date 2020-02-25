@@ -31,6 +31,10 @@ app.get('/participant1', function(req, res) {
 app.get('/participant2', function(req, res) {
   res.sendFile(path.join(__dirname, 'views/user/part_2_index.html'));
 });
+
+app.get('/participant4', function(req, res) {
+    res.sendFile(path.join(__dirname, 'views/user/part_4_index.html'));
+});
 app.get('/participant3', function(req, res) {
   res.sendFile(path.join(__dirname, 'views/user/part-3-index.html'));
 });
