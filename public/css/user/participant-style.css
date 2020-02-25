@@ -46,14 +46,6 @@ header {
 #bodyPart4 {
     background-image: url(/img/common/Background.png);
     background-color: aquamarine;
-    /* display: block; */
-    /* text-align: center; */
-    /* font-size: 40px; */
-    /* margin-top: 0px; */
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    /* width: 50%;  */
-
 }
 
 
@@ -70,10 +62,12 @@ header {
     unicode-bidi: bidi-override;
     direction: rtl;
 }
+
 .rating > span {
-    display: inline-block;
-    position: relative;
-    width: 1.1em;
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+  font-size: 25px;
 }
 .rating > span:hover:before,
 .rating > span:hover ~ span:before {
@@ -224,6 +218,10 @@ button:active{
 	      margin:0.4em auto;
     }
 }
+
+}
+#bodyPart2 p {
+    font-size: 40%;
 }
 
  #bodyPart3 .btn6Wrapper {
@@ -257,4 +255,10 @@ button:active{
     grid-gap: 10px;
     grid-template-columns: auto auto;
     grid-auto-rows: 1fr;
+}
+
+.buttonWrapper {
+    margin-top: 20px;
+    height: 120px;
+    text-align: center;
 }
