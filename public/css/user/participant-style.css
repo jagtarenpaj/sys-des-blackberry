@@ -74,6 +74,7 @@ header {
   display: inline-block;
   position: relative;
   width: 1.1em;
+  font-size: 25px;
 }
 .rating > span:hover:before,
 .rating > span:hover ~ span:before {
@@ -233,7 +234,12 @@ button:active{
     }
 }
 }
+#bodyPart2 p {
+    font-size: 40%;
+}
 
-#bodyPart3 .btn6Wrapper {
-     height: 200px;
- }
+.buttonWrapper {
+    margin-top: 20px;
+    height: 120px;
+    text-align: center;
+}
