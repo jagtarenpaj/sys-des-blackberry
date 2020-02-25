@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = 900;
+var countDownDate = 10;
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -27,6 +27,6 @@ var x = setInterval(function() {
     // If the count down is over, write some text 
     if (countDownDate < 0) {
         clearInterval(x);
-        document.getElementById("timer").innerHTML = "EXPIRED";
+        window.location.assign("http://localhost:3000/participant2");
     }
 }, 1000);
