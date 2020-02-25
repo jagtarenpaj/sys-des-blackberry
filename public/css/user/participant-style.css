@@ -6,6 +6,12 @@ header {
     overflow:hidden;
 }
 
+
+#bodyPart {
+    background-image: url(/img/common/Background.png);
+    background-color: aquamarine;
+}
+
 #bodyPart1 {
     background-image: url(/img/common/Background.png);
     background-color: aquamarine;
@@ -31,6 +37,10 @@ header {
 
 }
 
+#bodyPart3 {
+    background-image: url(/img/common/Background.png);
+    background-color: aquamarine; 
+}
 
 
 #bodyPart4 {
@@ -103,6 +113,15 @@ header {
     display: block;
     margin: auto auto;
     width: auto;
+}
+
+.wrapper p {
+    display: block;
+    margin: auto auto;
+    margin-top: 10%;
+    font-size: 30px;
+    width: auto;
+}
 
 .wrapper {
     display: grid;
