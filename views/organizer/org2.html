@@ -32,24 +32,37 @@
     <input id="exit" type="image" src="img/organizer/exit.png">
 
     
-      <input id="play" type="image" src="img/organizer/play.png">
+    <input id="play" type="image" src="img/organizer/play.png">
+    
+    <div v-for="(person, index) in profiles"
+	 class="profilePictureWraps"
+	 draggable="true"
+	 v-on:dragover="allowDrop"
+	 v-on:drop="dropProfile"
+	 :class="person.name + 'wrap'"
+	 :style="spaceProfile(index)">
       
-      <div v-for="(person, index) in profiles"
-	   class="profilePictureWraps"
-	   draggable="true"
-	   v-on:dragover="allowDrop"
-	   v-on:drop="dropProfile"
-	   :class="`${person.name}wraps`"
-	   :style="spaceProfile(index)">
-        <input :id="person.name"
+      <span>
+	<input :id="person.name"
 	       type="image"
 	       class="profilePicture"
 	       draggable="true"
 	       v-on:dragstart="dragSidebar"      
-	       :class="[`deg${degreeSpace[index]}`, `profile${index % 2}`, index]"
+	       :class="[`deg${degreeSpace[index]}`, `profile${index % 2}`, `${index}`]"
 	       :src="person.photo"/>
-	
-      </div>
+      </span>
+      
+      <span v-if: "getPairedProfile">
+	<input 
+	       type="image"
+	       class="profilePicture"
+	       draggable="true"
+	       v-on:dragstart="dragSidebar"      
+	       :class="[`deg${degreeSpace[index +1]}`, `profile${(index +1)% 2}`, `profiles[index +1]`]"
+	       :src="person.photo"/>
+      </span>
+
+    </div>
     
 
 

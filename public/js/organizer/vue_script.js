@@ -22,7 +22,12 @@ const vm = new Vue({
 
 	spaceProfile: function(index){
 	    
-	    return 'transform: rotate(' + this.degreeSpace[index] + 'deg) translate(380%) rotate(' + (-this.degreeSpace[index]) + 'deg)';	    
+	    //return 'transform: rotate(' + this.degreeSpace[index] + 'deg) translate(380%) rotate(' + (-this.degreeSpace[index]) + 'deg)';	    
+	},
+	
+	getPairedProfile: function(index){
+	    console.log(this.profiles[index +1]);
+	    return this.profiles[index +1];
 	},
 
 	dragSidebar: function(event){
