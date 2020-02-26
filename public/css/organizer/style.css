@@ -1,8 +1,17 @@
 
+html{
+height: 100%;
+}
+
 body{
     background-image: url(/img/organizer/Background.png);
     background-position: center;
-    
+    height: 100%;
+    margin: 0 0;
+}
+
+main{
+  height: 100%;
 }
 
 #exit{
@@ -15,6 +24,7 @@ body{
 }
 
 .tempSidebar{
+    display: inline;
     position: fixed;
     top: 10%;
     right: 0;
@@ -25,39 +35,54 @@ body{
     width: 280px;
 }
 
+.tempSidebar input {
+    display: inline;
+    position: relative;
+
+    z-index: 3;
+
+    margin: 5% 2% 2% 5%;
+
+    height: 70px;
+    width: auto;
+}
+
 
 .profileSidebar{
+
     position: fixed;
     top: 0;
     left: 0;
-
 
     background: #ffacb7;
     height: 100%;
     width: 280px;
 }
 
-.profileSideHeader{
+.profileSidebar input {
+    display: block;
+    position: relative;
+
+    z-index: 3;
+
+    padding-bottom: 4%;
+
+    height: 70px;
+    width: auto;
+}
+
+.sideHeader{
     display: block;
     margin: 0;
     padding-top: 5.5%;
-    
+
     color: #ff6069;
     background-color: #fbccd1;
 
     text-align: center;
     height: 5%;
 }
-.sidebar input {
-    display: block;
-    position: relative;
 
-    /* TODO: Make photo alignment leftwards*/
-    z-index: 3;
-    
-    height: 70px;
-    width: auto;
-}
 
 #play{
     position: fixed;
@@ -68,27 +93,34 @@ body{
     width: 9%;
 }
 
-.profilePictureWraps{
-    position: fixed;
+.pairWrap{
+    display: inline-block;
+    position: relative;
 
-    margin: 0 0;
+    margin: 0 1% 4% 1%;
 
     height: 90px;
     width: 90px;
 
-    left: 47.2%;
+    left: 38%;
     top: 41.75%;
+
+    background-color: white;
 }
 .profilePicture{
-    position: fixed;
+    position: relative;
 
     height: 90px;
     width: 90px;
 }
 
+.tooltiptext{
+
+  z-index: -1;
+}
 /*
 .table{
-    
+
     position: relative;
     z-index: -1;
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" id="dashboard_page">
-  <head> 
+  <head>
     <link rel="stylesheet" type="text/css" href="css/organizer/style.css">
 
     <script type="text/javascript" src="js/common/userProfiles.js"></script>
@@ -11,7 +11,7 @@
 
     <title>BB dating - dashboard</title>
   </head>
-  
+
   <body id="dashboard">
 
     <main id="dashboardContent">
@@ -19,51 +19,64 @@
       <div class="profileSidebar sidebar"
 	   v-on:dragstart="dragProfile"
 	   v-on:dragover="allowDrop"
-	   v-on:drop="dropSidebar">
-	<h2 class="profileSideHeader"> Profiles </h2>
+	   v-on:drop="dropProfile">
+	<h2 class="sideHeader"> Profiles </h2>
+
       </div>
 
        <span class="tempSidebar sidebar"
 	   v-on:dragstart="dragProfile"
 	   v-on:dragover="allowDrop"
 	   v-on:drop="dropSidebar">
+
+     <h2 class="sideHeader" droppable="false"> Unmatched </h2>
       </span>
-    
+
     <input id="exit" type="image" src="img/organizer/exit.png">
 
-    
+
     <input id="play" type="image" src="img/organizer/play.png">
-    
-    <div v-for="(person, index) in profiles"
-	 class="profilePictureWraps"
+
+    <div v-for="(pair, index) in pairs"
+	 class="pairWrap"
 	 draggable="true"
 	 v-on:dragover="allowDrop"
-	 v-on:drop="dropProfile"
-	 :class="person.name + 'wrap'"
-	 :style="spaceProfile(index)">
-      
-      <span>
-	<input :id="person.name"
-	       type="image"
-	       class="profilePicture"
-	       draggable="true"
-	       v-on:dragstart="dragSidebar"      
-	       :class="[`deg${degreeSpace[index]}`, `profile${index % 2}`, `${index}`]"
-	       :src="person.photo"/>
-      </span>
-      
-      <span v-if: "getPairedProfile">
-	<input 
-	       type="image"
-	       class="profilePicture"
-	       draggable="true"
-	       v-on:dragstart="dragSidebar"      
-	       :class="[`deg${degreeSpace[index +1]}`, `profile${(index +1)% 2}`, `profiles[index +1]`]"
-	       :src="person.photo"/>
-      </span>
+	 v-on:drop="dropCircle">
+
+   <div>
+     <input :id="`${pair[0]}`.name"
+   	       type="image"
+   	       class="profilePicture"
+   	       draggable="true"
+   	       v-on:dragstart="dragSidebar"
+   	       :src="pair[0].photo"/>
+
+           <span class="profileInfo">
+
+           </span>
+   </div>
+
+   <div>
+     <input :id="`${pair[1]}`.name"
+   	       type="image"
+   	       class="profilePicture"
+   	       draggable="true"
+   	       v-on:dragstart="dragSidebar"
+   	       :src="pair[1].photo"/>
+           <span class="profileInfo">
+
+           </span>
+   </div>
+
+
+    <!--  <div class="tooltip">
+        <span class="tooltiptext">
+
+        </span>
+      </div> -->
 
     </div>
-    
+
 
 
     </main>
